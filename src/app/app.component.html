@@ -1,3 +1,31 @@
 <app-header></app-header>
+<hr />
+<p>String:{{productName}}</p>
+<p>price:{{productPrice}}</p>
+<p>status:{{productStatus}}</p>
+<p>Info:{{productInfo.name}}-{{productInfo.price}}</p>
+<p>List:...</p>
+<table class="table table-bordererd">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productList; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.status ? "Còn hàng" : "hết hàng" }}</td>
+            <td>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
 <app-about></app-about>
 <router-outlet></router-outlet>
