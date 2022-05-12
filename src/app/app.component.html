@@ -5,27 +5,41 @@
 <p>status:{{productStatus}}</p>
 <p>Info:{{productInfo.name}}-{{productInfo.price}}</p>
 <p>List:...</p>
-<table class="table table-bordererd">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Status</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of productList; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{ product.name }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.status ? "Còn hàng" : "hết hàng" }}</td>
-            <td>
-                <button class="btn btn-danger">Delete</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+
+<form action="">
+    <input type="text" (keypress)="onHandlekeyPress($event)" value="{{title}}"> {{title}}
+</form>
+<hr/>
+<h2>NgModel</h2>
+<input type="text" [(ngModel)]="title" value="titele">{{title}}
+<hr>
+<button (click)="onHandleClick()">Click!</button>
+
+<div *ngIf="productStatus">
+    <table class="table table-bordererd">
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.status ? "Còn hàng" : "hết hàng" }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="onHandlerRemove(product.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <app-about></app-about>
 <router-outlet></router-outlet>

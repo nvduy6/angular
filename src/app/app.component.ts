@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  myName = "Duy";
   title = 'my-app';
   productName: string = "ProductA";
   productPrice: number = 10;
@@ -33,4 +34,14 @@ export class AppComponent {
         status: true
       }
     ]
+    onHandleClick(){
+      this.productStatus=!this.productStatus
+    }
+    onHandlerRemove(id:number){
+      this.productList=this.productList.filter(item=>item.id!==id)
+    }
+    onHandlekeyPress(event:any){
+      console.log(event.target.value)
+      this.title=event.target.value;
+    }
 }
