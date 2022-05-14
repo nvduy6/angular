@@ -59,6 +59,9 @@ export class AppComponent {
     console.log(event.target.value)
     this.title = event.target.value;
   }
+  onHandleAdd(product:any){
+    this.productList.push(product);
+  }
 
 
 }
