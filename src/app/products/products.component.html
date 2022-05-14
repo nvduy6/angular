@@ -1,0 +1,17 @@
+<table class="table table-borderd">
+
+    <body>
+
+        <tr *ngFor="let product of productList; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button class="btn btn-info" (click)="showDetail(product.id)">Info </button>
+            </td>
+        </tr>
+    </body>
+</table>
+<div *ngIf="productDetail">
+    {{productDetail.name}}
+</div>

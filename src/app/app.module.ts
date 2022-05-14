@@ -7,13 +7,17 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
+import { ProductsComponent } from './products/products.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutComponent,
-    ProductComponent
+    ProductComponent,
+    ProductsComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,
