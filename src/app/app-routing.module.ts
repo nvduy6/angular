@@ -17,7 +17,8 @@ children:[
 },
   {path:"about",component:AboutComponent},
   {path:"products",component:ProductsComponent},
-  {path:"product",component:ProductComponent}
+  {path:"product",component:ProductComponent},
+  {path: "product/:id",component:ProductDetailComponent}
 ];
 
 @NgModule({
