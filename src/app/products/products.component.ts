@@ -9,7 +9,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsComponent implements OnInit {
   // @Input('data') productList!: Iproduct[];
-  productList!:any;
+  productList!:Iproduct[];
   constructor(private productService: ProductService) { 
     this.ShowProducts();
   }
@@ -19,6 +19,13 @@ export class ProductsComponent implements OnInit {
   ShowProducts(){
     this.productService.getProducts().subscribe(data=>{
       this.productList=data
+    })
+  }
+  onRemoveItem(id:number){
+    // call Api xoa
+    this.productService.removeProduct(id).subscribe(()=>{
+      // render
+      this.productList=this.productList.filter(item =>item.id!==id);
     })
   }
 }

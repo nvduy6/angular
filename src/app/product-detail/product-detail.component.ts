@@ -9,12 +9,12 @@ import { Iproduct } from '../models/Product';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-productDetail!:any
+productDetail!:Iproduct
   constructor(private router:ActivatedRoute,
   private productService: ProductService) {
 
     const id = this.router.snapshot.paramMap.get('id')!;
-    this.productService.getProduct(+id).subscribe(data=>this.productDetail=data)
+    this.productService.getProduct(+id).subscribe(data=>{this.productDetail=data})
    }
 
   ngOnInit(): void {
