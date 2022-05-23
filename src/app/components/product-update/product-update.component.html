@@ -1,0 +1,12 @@
+<h3>Cập nhật sản phẩm</h3>
+<form *ngIf="product">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name product</label>
+        <input type="text" [(ngModel)]="product.name" class="form-control" placeholder="name" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Price</label>
+        <input type="number" [(ngModel)]="product.price" class="form-control" placeholder="price" name="price" id="">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="updateProduct()">Update</button>
+</form>

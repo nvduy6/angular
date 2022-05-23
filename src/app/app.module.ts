@@ -3,27 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { AboutComponent } from './about/about.component';
-import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
-import { ProductsComponent } from './products/products.component';
-import { ProductAddComponent } from './product-add/product-add.component';
-import { HomeComponent } from './home/home.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ProductUpdateComponent } from './product-update/product-update.component'
+import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductService } from './services/product.service';
+import { ProductUpdateComponent } from './components/product-update/product-update.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { ListProductsComponent } from './components/list-products/list-products.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    AboutComponent,
-    ProductComponent,
-    ProductsComponent,
     ProductAddComponent,
-    HomeComponent,
     ProductDetailComponent,
-    ProductUpdateComponent
+    ProductsComponent,
+    ProductUpdateComponent,
+    HeaderComponent,
+    HomeComponent,
+   AdminComponent,
+   ListProductsComponent
+  
+    
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

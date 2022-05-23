@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Iproduct } from '../models/Product';
-import { ProductService } from '../services/product.service';
+import { Iproduct } from '../../models/Product';
+import { ProductService } from 'src/app/services/product.service'; 
 
 @Component({
   selector: 'app-product-update',
@@ -24,7 +24,7 @@ id!:number;
   }
 updateProduct(){
   this.productService.updateProduct(this.product).subscribe(()=>{
-    this.routes.navigate(['products']);
+    this.routes.navigate(['admin/products']);
   })
 }
 }

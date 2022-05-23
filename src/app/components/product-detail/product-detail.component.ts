@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../services/product.service';
-import mockData from '../data';
-import { Iproduct } from '../models/Product';
+import { ProductService } from 'src/app/services/product.service'; 
+import mockData from '../../data';
+import { Iproduct } from '../../models/Product';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
