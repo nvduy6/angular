@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
 API_URL: string = 'http://localhost:3000/product'
   constructor(private http: HttpClient) { }
-  getProduct(id:number){
+  getProduct(id:string|number):Observable<Iproduct>{
     return this.http.get<Iproduct>(`${this.API_URL}/${id}`)
   }
   getProducts():Observable<Iproduct[]>{
@@ -19,8 +19,10 @@ API_URL: string = 'http://localhost:3000/product'
   removeProduct(id:number):Observable<Iproduct>{
 return this.http.delete<Iproduct>(`${this.API_URL}/${id}`)
   }
-  addProduct(product: any){
-mockData.push(product);
+  addProduct(product: any):Observable<Iproduct>{
+return this.http.post<Iproduct>(this.API_URL,product)
   }
-  updateProduct(){}
+  updateProduct(product:Iproduct):Observable<Iproduct>{
+    return this.http.put<Iproduct>(`${this.API_URL}/${product.id}`,product);
+  }
 }

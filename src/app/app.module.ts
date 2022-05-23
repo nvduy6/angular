@@ -11,7 +11,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { ProductUpdateComponent } from './product-update/product-update.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http'
     ProductsComponent,
     ProductAddComponent,
     HomeComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,

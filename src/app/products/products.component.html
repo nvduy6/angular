@@ -20,14 +20,22 @@
         <a href=""></a>
     </li>
 </ul> -->
-<div>
-    <div class="grid">
-        <div *ngFor="let product of productList; let i=index" class="g-col-4">
-            <img style="width: 20%;" src="https://kenh14cdn.com/thumb_w/660/2020/7/17/brvn-15950048783381206275371.jpg" alt=""><br>
-            <h2>{{product.name}}</h2><br>
-            <span>{{product.price}} VND</span> <br>
-            <a href='/product/{{product.id}}'><button>Mua hangf</button></a>
-            <button class="btn btn-primary" (click)="onRemoveItem(product.id)">Remove</button>
-        </div>
-    </div>
-</div>
+<button class="btn btn-info "><a href="/product/add">Them moi</a></button>
+
+<table class="table table-bordered ">
+    <tbody>
+        <tr *ngFor="let product of productList; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>
+                <!-- <button class="btn btn-info">Info</button> -->
+                <button routerLink="/product/{{ product.id }}">Detail</button>
+                <button class="btn btn-primary" (click)="onRemoveItem(product.id)">Remove</button>
+                <!-- <button routerLink="products/edit/{{product.id}}" class=" btn btn-primary  ">Update</button> -->
+                <a href="products/edit/{{product.id}}">update</a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

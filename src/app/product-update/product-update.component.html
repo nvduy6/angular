@@ -1,9 +1,8 @@
-<p>product-add works!</p>
-{{product|json}}
-<form (ngSubmit)="onSubmit()">
+<!-- <p>product-update works!</p> -->
+<form *ngIf="product">
     <input type="text" [(ngModel)]="product.name" placeholder="name" name="name">
     <br><br/>
     <input type="number" [(ngModel)]="product.price" placeholder="price" name="price" id="">
     <br><br/>
-    <button class="btn btn-primary" type="submit">Add</button>
+    <button type="submit" class="btn btn-primary" (click)="updateProduct()">Add</button>
 </form>
