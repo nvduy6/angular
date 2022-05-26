@@ -11,6 +11,11 @@
       "name": "product B",
       "price": 30012,
       "status": true
+    },
+    {
+      "id": 3,
+      "name": "product C",
+      "price": 30000
     }
   ]
 }

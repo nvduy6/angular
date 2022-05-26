@@ -4,6 +4,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductUpdateComponent } from './components/product-update/product-update.component';
 import { ProductsComponent } from './components/products/products.component';
 
@@ -15,6 +16,10 @@ const routes: Routes = [
       {
         path:'',
      component:ListProductsComponent
+      },
+      {
+        path:'product/:id',
+        component:ProductDetailComponent
       }
     ]
   },

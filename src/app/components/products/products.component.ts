@@ -22,10 +22,14 @@ export class ProductsComponent implements OnInit {
     })
   }
   onRemoveItem(id:number){
-    // call Api xoa
-    this.productService.removeProduct(id).subscribe(()=>{
-      // render
-      this.productList=this.productList.filter(item =>item.id!==id);
-    })
+    const confirm = window.confirm("Bạn có muốn xóa ko?");
+    if(confirm){
+// call Api xoa
+this.productService.removeProduct(id).subscribe(()=>{
+  // render
+  this.productList=this.productList.filter(item =>item.id!==id);
+})
+    }
+    
   }
 }

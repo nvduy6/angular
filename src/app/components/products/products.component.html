@@ -4,7 +4,7 @@
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Handler</th>
         </tr>
     </thead>
     <tbody>
@@ -14,10 +14,10 @@
             <td>{{ product.price }}</td>
             <td>
                 <!-- <button class="btn btn-info">Info</button> -->
-                <button routerLink="admin/product/{{ product.id }}">Detail</button>
+                <!-- <button routerLink="admin/product/{{ product.id }}">Detail</button> -->
                 <button class="btn btn-primary" (click)="onRemoveItem(product.id)">Remove</button>
                 <!-- <button routerLink="products/edit/{{product.id}}" class=" btn btn-primary  ">Update</button> -->
-                <a href="admin/products/edit/{{product.id}}">update</a>
+                <button class="btn btn-info"><a href="admin/products/edit/{{product.id}}">update</a></button>
             </td>
 
         </tr>
