@@ -15,7 +15,7 @@
             <td>
                 <!-- <button class="btn btn-info">Info</button> -->
                 <!-- <button routerLink="admin/product/{{ product.id }}">Detail</button> -->
-                <button class="btn btn-primary" (click)="onRemoveItem(product.id)">Remove</button>
+                <button class="btn btn-danger" (click)="onRemoveItem(product.id!)">Remove</button>
                 <!-- <button routerLink="products/edit/{{product.id}}" class=" btn btn-primary  ">Update</button> -->
                 <button class="btn btn-info"><a href="admin/products/edit/{{product.id}}">update</a></button>
             </td>
