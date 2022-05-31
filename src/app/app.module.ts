@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ListProductsComponent } from './components/list-products/list-products.
     HeaderComponent,
     HomeComponent,
    AdminComponent,
-   ListProductsComponent
+   ListProductsComponent,
+   SignUpComponent
   
     
   ],

@@ -17,5 +17,13 @@
       "name": "product C",
       "price": 30000
     }
+  ],
+  "users": [
+    {
+      "name": "duy",
+      "email": "duynvph15542@fpt.edu.vn",
+      "password": "123abc",
+      "id": 1
+    }
   ]
 }

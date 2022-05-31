@@ -7,21 +7,29 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductUpdateComponent } from './components/product-update/product-update.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AdminGuard } from './services/guards/admin.guard';
 
 const routes: Routes = [
   {
-    path:'',
-    component:HomeComponent,
-    children:[
+    path: '',
+    component: HomeComponent,
+    children: [
       {
-        path:'',
-     component:ListProductsComponent
+        path: '',
+        component: ListProductsComponent
       },
       {
-        path:'product/:id',
-        component:ProductDetailComponent
-      }
-    ]
+        path: 'product/:id',
+        component: ProductDetailComponent
+      },
+    
+    ],
+   
+  },
+  {
+    path:'signup',
+    component:SignUpComponent
   },
 
   {
@@ -34,7 +42,7 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: "products",
+        path: "products",canActivate:[AdminGuard],
         children: [
           {
             path: '',
