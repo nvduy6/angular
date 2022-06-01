@@ -24,6 +24,12 @@
       "email": "duynvph15542@fpt.edu.vn",
       "password": "123abc",
       "id": 1
+    },
+    {
+      "email": "duynguyenvan328@gmail.com",
+      "password": "$2a$10$YG0kX7wML6xmJ377J3OpF.61SRZtojypmNzTjKbGKyTT7GeoEAflu",
+      "name": "admin",
+      "id": 2
     }
   ]
 }
