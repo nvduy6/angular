@@ -1,75 +1,75 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { HomeComponent } from './components/home/home.component';
-import { ListProductsComponent } from './components/list-products/list-products.component';
-import { ProductAddComponent } from './components/product-add/product-add.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ProductUpdateComponent } from './components/product-update/product-update.component';
-import { ProductsComponent } from './components/products/products.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AddUserComponent } from './components/layoutAdmin/authen/add-user/add-user.component';
+import { ListUserComponent } from './components/layoutAdmin/authen/list-user/list-user.component';
+import { DashboardComponent } from './components/layoutAdmin/dashboard/dashboard.component';
+import { BlogComponent } from './components/layoutCline/blog/blog.component';
+import { HomeComponent } from './components/layoutCline/home/home.component';
+import { LayoutComponent } from './components/layoutCline/layout/layout.component';
+import { WorkComponent } from './components/layoutCline/work/work.component';
+
 import { AdminGuard } from './services/guards/admin.guard';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-    children: [
-      {
-        path: '',
-        component: ListProductsComponent
-      },
-      {
-        path: 'product/:id',
-        component: ProductDetailComponent
-      },
-    
-    ],
-   
-  },
-  {
-    path:'signup',
-    component:SignUpComponent
-  },
-  {
-    path:'about',
-    component:AboutComponent
-  },
-
-  {
     path: 'admin',
-    component: AdminComponent,
-    children: [
+    component:DashboardComponent,
+    children:[
       {
-        path: '',
-        redirectTo: 'products',
-        pathMatch: 'full',
+        path:'',
+        redirectTo:'user',
+        pathMatch:'full'
       },
       {
-        path: "products",canActivate:[AdminGuard],
+        path:'user',
+        children:[
+          {
+            path:'',
+            component:ListUserComponent,
+          },
+          {
+            path:'add',
+            component:AddUserComponent
+          },
+          {
+            path:'edit/:id',
+            component:AddUserComponent
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      
+      {
+        path: '',
+
         children: [
           {
             path: '',
-            component: ProductsComponent
-          },
-          {
-            path: 'add',
-            component: ProductAddComponent
-          },
-          {
-            path: 'edit/:id',
-            component: ProductAddComponent,
+            children: [
+              {
+                path: '',
+                component: HomeComponent,
+              },
+              {
+                path: 'work',
+                component: WorkComponent,
+              },
+              {
+                path: 'blog',
+                component: BlogComponent
+              }
+
+            ]
           }
         ]
-
       }
-
     ]
   }
-  ,
-
-
 ];
 
 @NgModule({
