@@ -18,18 +18,30 @@
       "price": 30000
     }
   ],
-  "users": [
+  "infor": [
     {
-      "name": "duy",
-      "email": "duynvph15542@fpt.edu.vn",
-      "password": "123abc",
+      "name": "",
+      "desc": "",
+      "image": "",
       "id": 1
     },
     {
-      "email": "duynguyenvan328@gmail.com",
-      "password": "$2a$10$YG0kX7wML6xmJ377J3OpF.61SRZtojypmNzTjKbGKyTT7GeoEAflu",
-      "name": "admin",
+      "name": "",
+      "desc": "",
+      "image": "",
       "id": 2
+    },
+    {
+      "name": "",
+      "desc": "",
+      "image": "",
+      "id": 3
+    },
+    {
+      "name": "duy",
+      "desc": "co gang len em iu ok a",
+      "image": "",
+      "id": 4
     }
   ]
 }

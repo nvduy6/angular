@@ -7,9 +7,22 @@ import { IpUser } from '../models/authen';
   providedIn: 'root'
 })
 export class AuthenService {
-API_url:string ='http://localhost:3000/users'
+API_url:string ='http://localhost:3000/infor'
   constructor(private http: HttpClient) { }
-  addUser(user:any):Observable<IpUser>{
-    return this.http.post<IpUser>(this.API_url,user)
+ 
+  addUser(product: any): Observable<IpUser> {
+    return this.http.post<IpUser>(this.API_url, product)
+  }
+  getUsers(): Observable<IpUser[]> {
+    return this.http.get<IpUser[]>(this.API_url);
+  }
+  getUser(id: string | number): Observable<IpUser> {
+    return this.http.get<IpUser>(`${this.API_url}/${id}`)
+  }
+  removeUser(id: number): Observable<IpUser> {
+    return this.http.delete<IpUser>(`${this.API_url}/${id}`)
+  }
+  updateUser(product: IpUser): Observable<IpUser> {
+    return this.http.put<IpUser>(`${this.API_url}/${product.id}`, product);
   }
 }
