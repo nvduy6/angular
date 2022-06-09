@@ -14,6 +14,8 @@ import { DashboardComponent } from './components/layoutAdmin/dashboard/dashboard
 import { AddUserComponent } from './components/layoutAdmin/authen/add-user/add-user.component';
 import { ListUserComponent } from './components/layoutAdmin/authen/list-user/list-user.component';
 import { UpdateUserComponent } from './components/layoutAdmin/authen/update-user/update-user.component';
+import { AddCategoryComponent } from './components/layoutAdmin/category/add-category/add-category.component';
+import { ListCategoryComponent } from './components/layoutAdmin/category/list-category/list-category.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { UpdateUserComponent } from './components/layoutAdmin/authen/update-user
     AddUserComponent,
     ListUserComponent,
     UpdateUserComponent,
+    AddCategoryComponent,
+    ListCategoryComponent,
    
   
     
