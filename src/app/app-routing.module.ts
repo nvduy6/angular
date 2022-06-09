@@ -5,6 +5,8 @@ import { ListUserComponent } from './components/layoutAdmin/authen/list-user/lis
 import { AddCategoryComponent } from './components/layoutAdmin/category/add-category/add-category.component';
 import { ListCategoryComponent } from './components/layoutAdmin/category/list-category/list-category.component';
 import { DashboardComponent } from './components/layoutAdmin/dashboard/dashboard.component';
+import { AddPostComponent } from './components/layoutAdmin/post/add-post/add-post.component';
+import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-post.component';
 import { BlogComponent } from './components/layoutCline/blog/blog.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
@@ -54,6 +56,22 @@ const routes: Routes = [
             path: 'edit/:id',
             component: AddCategoryComponent,
           }
+        ]
+      },
+      {
+        path:'post',
+        children:[
+          {path:'',
+        component:ListPostComponent},
+        {
+          path:'add',
+          component:AddPostComponent
+        },
+        {
+          path:'edit/:id',
+          component:AddPostComponent
+        }
+
         ]
       }
     ]

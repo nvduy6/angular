@@ -23,5 +23,11 @@ post:IpPost={
 
   ngOnInit(): void {
   }
-
+onSubmitPost(){
+  this.postService.addPost(this.post).subscribe(data=>{
+    setTimeout(()=>{
+      this.router.navigate(['admin/post'])
+    })
+  })
+}
 }
