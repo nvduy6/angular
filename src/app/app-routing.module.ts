@@ -51,7 +51,7 @@ const routes: Routes = [
             component: AddCategoryComponent,
           },
           {
-            path: 'edit/id',
+            path: 'edit/:id',
             component: AddCategoryComponent,
           }
         ]

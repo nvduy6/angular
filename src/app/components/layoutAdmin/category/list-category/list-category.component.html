@@ -32,15 +32,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let cate of cateList;let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{cate.name}}</td>
                 <td>
-                    <button nz-button nzType="primary">Delete</button>
-                    <a href="">update</a>
-                    <a href=""> <button nz-button nzType="primary">Update</button></a>
+                    <button nz-button nzType="primary" (click)="onRemoveItem(cate.id!)">Delete</button>
+
+                    <a href="/admin/cate/edit/{{cate.id}}"> <button nz-button nzType="primary">Update</button></a>
                 </td>
             </tr>
         </tbody>
