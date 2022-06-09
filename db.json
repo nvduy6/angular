@@ -1,45 +1,43 @@
 {
-  "product": [
-    {
-      "id": 1,
-      "name": "product A update",
-      "price": 20034,
-      "status": false
-    },
-    {
-      "id": 2,
-      "name": "product B",
-      "price": 30012,
-      "status": true
-    },
-    {
-      "id": 3,
-      "name": "product C",
-      "price": 30000
-    }
-  ],
-  "infor": [
-    {
-      "name": "duy",
-      "desc": "update",
-      "image": "",
-      "id": 4
-    },
-    {
-      "name": "admin",
-      "desc": "khongsss123455update",
-      "image": "",
-      "id": 5
-    }
-  ],
-  "categoryBlogs": [
-    {
-      "name": "hmtl",
-      "id": 2
-    },
-    {
-      "name": "nukeviet12",
-      "id": 3
-    }
-  ]
+    "product": [{
+            "id": 1,
+            "name": "product A update",
+            "price": 20034,
+            "status": false
+        },
+        {
+            "id": 2,
+            "name": "product B",
+            "price": 30012,
+            "status": true
+        },
+        {
+            "id": 3,
+            "name": "product C",
+            "price": 30000
+        }
+    ],
+    "infor": [{
+            "name": "duy",
+            "desc": "update",
+            "image": "",
+            "id": 4
+        },
+        {
+            "name": "admin",
+            "desc": "khongsss123455update",
+            "image": "",
+            "id": 5
+        }
+    ],
+    "categoryBlogs": [{
+            "name": "hmtl",
+            "id": 2
+        },
+        {
+            "name": "nukeviet12",
+            "id": 3
+        }
+    ],
+    "posts": []
 }

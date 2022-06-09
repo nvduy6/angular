@@ -16,6 +16,8 @@ import { ListUserComponent } from './components/layoutAdmin/authen/list-user/lis
 import { UpdateUserComponent } from './components/layoutAdmin/authen/update-user/update-user.component';
 import { AddCategoryComponent } from './components/layoutAdmin/category/add-category/add-category.component';
 import { ListCategoryComponent } from './components/layoutAdmin/category/list-category/list-category.component';
+import { AddPostComponent } from './components/layoutAdmin/post/add-post/add-post.component';
+import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-post.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { ListCategoryComponent } from './components/layoutAdmin/category/list-ca
     UpdateUserComponent,
     AddCategoryComponent,
     ListCategoryComponent,
+    AddPostComponent,
+    ListPostComponent,
    
   
     
