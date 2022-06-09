@@ -8,6 +8,17 @@
         <input type="text" [(ngModel)]="post.image" class="form-control" name="image">
     </div>
     <div class="mb-3">
+        <label for="exampleInputEmail1" [(ngModel)]="post.image" class="form-label">Category</label>
+        <select name="catePost" [(ngModel)]="post.catePost" id="category" className="focus:ring-indigo-500 focus:border-indigo-800 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
+            <option>-- Chọn danh mục sản phẩm --</option>
+            
+                <option  *ngFor="let cate of cateList;let i = index" value={{cate.name}}>{{cate.name}}</option >
+             
+
+
+          </select>
+    </div>
+    <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">CreateAt</label>
         <input type="text" [(ngModel)]="post.createAt" class="form-control" name="createAt">
     </div>
