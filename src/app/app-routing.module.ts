@@ -9,6 +9,8 @@ import { ListCateProjectComponent } from './components/layoutAdmin/categoryProje
 import { DashboardComponent } from './components/layoutAdmin/dashboard/dashboard.component';
 import { AddPostComponent } from './components/layoutAdmin/post/add-post/add-post.component';
 import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-post.component';
+import { AddProjectComponent } from './components/layoutAdmin/project/add-project/add-project.component';
+import { ListProjectComponent } from './components/layoutAdmin/project/list-project/list-project.component';
 import { BlogComponent } from './components/layoutCline/blog/blog.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
@@ -92,6 +94,23 @@ const routes: Routes = [
           path:'edit/:id',
           component:AddCateProjectComponent
         }
+        ]
+      },
+      {
+        path:'project',
+        children:[
+          {
+            path:'',
+            component:ListProjectComponent
+          },
+          {
+            path:'add',
+            component:AddProjectComponent
+          },
+          {
+            path:'edit/:id',
+            component:AddProjectComponent
+          }
         ]
       }
     ]

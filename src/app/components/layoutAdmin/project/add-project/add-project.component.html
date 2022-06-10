@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmitPost()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="project.name" class="form-control" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Image</label>
+        <input type="text" [(ngModel)]="project.image" class="form-control" name="image">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Category</label>
+        <select name="catePost" [(ngModel)]="project.categoryProjectId" id="category" className="focus:ring-indigo-500 focus:border-indigo-800 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
+            <option>-- Chọn danh mục sản phẩm --</option>
+            
+                <option  *ngFor="let cate of cateList;let i = index" value={{cate.name}}>{{cate.name}}</option >
+             
+
+
+          </select>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">CreateAt</label>
+        <input type="text" [(ngModel)]="project.createAt" class="form-control" name="createAt">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Short_desc</label><br>
+        <textarea name="short_desc" [(ngModel)]="project.short_desc" id="" cols="50" rows="5" style="width: 100%;"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Desc</label><br>
+        <textarea name="desc" [(ngModel)]="project.desc" id="" cols="50" rows="5" style="width: 100%;"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

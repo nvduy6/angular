@@ -20,6 +20,8 @@ import { AddPostComponent } from './components/layoutAdmin/post/add-post/add-pos
 import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-post.component';
 import { AddCateProjectComponent } from './components/layoutAdmin/categoryProject/add-cate-project/add-cate-project.component';
 import { ListCateProjectComponent } from './components/layoutAdmin/categoryProject/list-cate-project/list-cate-project.component';
+import { AddProjectComponent } from './components/layoutAdmin/project/add-project/add-project.component';
+import { ListProjectComponent } from './components/layoutAdmin/project/list-project/list-project.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { ListCateProjectComponent } from './components/layoutAdmin/categoryProje
     ListPostComponent,
     AddCateProjectComponent,
     ListCateProjectComponent,
+    AddProjectComponent,
+    ListProjectComponent,
    
   
     
