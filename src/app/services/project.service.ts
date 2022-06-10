@@ -7,7 +7,7 @@ import { IpProject } from '../models/project';
   providedIn: 'root'
 })
 export class ProjectService {
-API_URL:string="http//localhost:3000/projects";
+API_URL:string="http://localhost:3000/projects";
   constructor(private http:HttpClient) { }
   getProject(id:string|number):Observable<IpProject>{
     return this.http.get<IpProject>(`${this.API_URL}/${id}`)

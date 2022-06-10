@@ -1,55 +1,63 @@
 {
-    "product": [{
-            "id": 1,
-            "name": "product A update",
-            "price": 20034,
-            "status": false
-        },
-        {
-            "id": 2,
-            "name": "product B",
-            "price": 30012,
-            "status": true
-        },
-        {
-            "id": 3,
-            "name": "product C",
-            "price": 30000
-        }
-    ],
-    "infor": [{
-            "name": "duy",
-            "desc": "update",
-            "image": "",
-            "id": 4
-        },
-        {
-            "name": "admin",
-            "desc": "khongsss123455update",
-            "image": "",
-            "id": 5
-        }
-    ],
-    "categoryBlogs": [{
-            "name": "hmtl",
-            "id": 2
-        },
-        {
-            "name": "nukeviet12",
-            "id": 3
-        }
-    ],
-    "posts": [{
-        "title": "bai viet update",
-        "image": "https://i.pinimg.com/originals/2e/f0/86/2ef086033e321d78e9bbd2cd06083fa4.jpg",
-        "createAt": "2002",
-        "short_desc": "noij dung mo ta",
-        "desc": "noi dung mo ta dai ",
-        "id": 1
-    }],
-    "categoriesProjects": [{
-        "name": "duy1234update",
-        "id": 1
-    }],
-    "projects": []
+  "product": [
+    {
+      "id": 1,
+      "name": "product A update",
+      "price": 20034,
+      "status": false
+    },
+    {
+      "id": 2,
+      "name": "product B",
+      "price": 30012,
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "product C",
+      "price": 30000
+    }
+  ],
+  "infor": [
+    {
+      "name": "duy",
+      "desc": "update",
+      "image": "",
+      "id": 4
+    },
+    {
+      "name": "admin",
+      "desc": "khongsss123455update",
+      "image": "",
+      "id": 5
+    }
+  ],
+  "categoryBlogs": [
+    {
+      "name": "hmtl",
+      "id": 2
+    },
+    {
+      "name": "nukeviet12",
+      "id": 3
+    }
+  ],
+  "posts": [],
+  "categoriesProjects": [
+    {
+      "name": "duy1234update",
+      "id": 1
+    }
+  ],
+  "projects": [
+    {
+      "name": "admin",
+      "image": "/uploads/about/tap-doan-hyundai-hdd.jpg",
+      "categoryProjectId": "duy1234update",
+      "createAt": "asaxaxsaxssaa",
+      "short_desc": "assasacdacd",
+      "desc": "acadcacda",
+      "id": 1
+    }
+  ]
 }
