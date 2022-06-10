@@ -51,5 +51,11 @@
       "desc": "noi dung mo ta dai ",
       "id": 1
     }
+  ],
+  "categoriesProjects": [
+    {
+      "name": "duy1234update",
+      "id": 1
+    }
   ]
 }

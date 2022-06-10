@@ -18,6 +18,8 @@ import { AddCategoryComponent } from './components/layoutAdmin/category/add-cate
 import { ListCategoryComponent } from './components/layoutAdmin/category/list-category/list-category.component';
 import { AddPostComponent } from './components/layoutAdmin/post/add-post/add-post.component';
 import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-post.component';
+import { AddCateProjectComponent } from './components/layoutAdmin/categoryProject/add-cate-project/add-cate-project.component';
+import { ListCateProjectComponent } from './components/layoutAdmin/categoryProject/list-cate-project/list-cate-project.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-
     ListCategoryComponent,
     AddPostComponent,
     ListPostComponent,
+    AddCateProjectComponent,
+    ListCateProjectComponent,
    
   
     
