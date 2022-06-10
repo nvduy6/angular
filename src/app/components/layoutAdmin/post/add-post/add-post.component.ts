@@ -27,6 +27,12 @@ post:IpPost={
   ) { this.ShowCate()}
 
   ngOnInit(): void {
+    const id = +this.route.snapshot.paramMap.get('id')!;
+    if(id){
+      this.postService.getPost(id).subscribe(data=>{
+        this.post=data
+      })
+    }
   }
   ShowCate(){
 this.categoryServie.getCates().subscribe(data=>{
@@ -34,10 +40,20 @@ this.categoryServie.getCates().subscribe(data=>{
 })
   }
 onSubmitPost(){
-  this.postService.addPost(this.post).subscribe(data=>{
+  const id = +this.route.snapshot.paramMap.get('id')!;
+  if(id){
+    this.postService.updatePost(this.post).subscribe((data)=>{
     setTimeout(()=>{
       this.router.navigate(['admin/post'])
+    },2000)
     })
-  })
+  }else{
+    this.postService.addPost(this.post).subscribe(data=>{
+      setTimeout(()=>{
+        this.router.navigate(['admin/post'])
+      })
+    })
+  }
+  
 }
 }

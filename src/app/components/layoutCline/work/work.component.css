@@ -1,82 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Heebo", sans-serif !important;
+}
+
 .container {
-    padding: 2px 170px;
-    margin: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.colum_word {
+
+/** feature_works **/
+
+.feature_works .row__title {
+    padding: 20px 0;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+.feature_works__row-item-work .item_work {
     display: grid;
-    grid-template-columns: 240px auto;
+    grid-template-columns: 246px auto;
+    gap: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.row_word {
-    margin-top: 30px;
-}
-
-.title {
-    font-size: 22px;
-}
-
-.image_word img {
-    width: 246px;
-    height: 180px;
-}
-
-.infor_word ul li {
-    margin-left: 20px;
-    list-style-type: none;
-}
-
-.infor_word_name {
-    margin-top: 0px;
-    font-size: 30px;
-}
-
-.word_item {
+.item_work__row-date-category {
+    padding: 20px 0;
     display: flex;
 }
 
-.btn_word {
-    background-color: black;
-    color: white;
-    width: 60px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 18px;
+.item_work__row-date-category .date span {
+    background-color: #142850;
+    padding: 1px 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-.word_cate {
+.item_work__row-date-category .category {
     margin-left: 20px;
-    margin-top: 2px;
-    font-size: 20px;
+    color: #8695a4;
 }
 
-.word_desc {
-    font-size: 16px;
-    margin-top: 22px;
-}
-
-@media only screen and (max-width:380px) {
-    body {
-        width: 375px;
-    }
+@media only screen and (min-width: 855px) {
     .container {
-        padding: 2px 22px;
-        width: 100%;
-        margin: auto;
+        width: 855px;
     }
-    .colum_word {
-        display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 0 20px;
     }
-    .image_word img {
-        width: 100%;
-        height: 230px;
-    }
-    .infor_word {
+    .information__about {
         width: 100%;
     }
-    .infor_word ul li {
-        margin-left: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        padding: 0 10px;
+    }
+    .feature_works .row__title {
+        text-align: center;
+    }
+    .feature_works__row-item-work .item_work {
+        grid-template-columns: auto;
+    }
+    .item_work__img {
+        width: 100%;
+    }
+    .item_work__img img {
+        width: 100%;
     }
 }
