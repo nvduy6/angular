@@ -5,7 +5,7 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Image</label>
-        <input type="text" [(ngModel)]="post.image" class="form-control" name="image">
+        <input type="file" [(ngModel)]="post.image" (change)="changeImage($event)" class="form-control" name="image">
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" [(ngModel)]="post.image" class="form-label">Category</label>

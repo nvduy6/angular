@@ -42,7 +42,17 @@
       "id": 3
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "title": "bai viet moi",
+      "image": "http://res.cloudinary.com/duynv/image/upload/v1654927930/image/j3rbszbsllii1znbr4wm.jpg",
+      "catePost": "hmtl",
+      "createAt": "2002",
+      "short_desc": "cdsfaffffddddddddddddddddddddddddddd",
+      "desc": "gggggggggggggggggggggggggggggggggggggggggggg",
+      "id": 1
+    }
+  ],
   "categoriesProjects": [
     {
       "name": "duy1234update",

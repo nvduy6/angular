@@ -4,6 +4,7 @@ import { IPcate } from 'src/app/models/category';
 import { IpPost } from 'src/app/models/post';
 import { CategoryService } from 'src/app/services/category.service';
 import { PostService } from 'src/app/services/post.service';
+import axios, { Axios } from 'axios';
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
@@ -42,18 +43,45 @@ this.categoryServie.getCates().subscribe(data=>{
 onSubmitPost(){
   const id = +this.route.snapshot.paramMap.get('id')!;
   if(id){
-    this.postService.updatePost(this.post).subscribe((data)=>{
-    setTimeout(()=>{
-      this.router.navigate(['admin/post'])
-    },2000)
-    })
-  }else{
-    this.postService.addPost(this.post).subscribe(data=>{
-      setTimeout(()=>{
-        this.router.navigate(['admin/post'])
+    const apiUr="https://api.cloudinary.com/v1_1/duynv/image/upload";
+      const formdata = new FormData();
+      formdata.append('file',this.post.image);
+      formdata.append("upload_preset","okwdgnez");
+      axios.post(apiUr,formdata,{
+        headers:{
+          "Content-Type": "application/form-data"
+        },
+  
+      }).then((response:any)=>{
+        this.post.image=response.data.url;
+        this.postService.updatePost(this.post).subscribe(data=>{
+          setTimeout(()=>{
+            this.router.navigate(['/admin/post'])
+          })
+        })
       })
-    })
+  }else{
+    const apiUr="https://api.cloudinary.com/v1_1/duynv/image/upload";
+      const formdata = new FormData();
+      formdata.append('file',this.post.image);
+      formdata.append("upload_preset","okwdgnez");
+      axios.post(apiUr,formdata,{
+        headers:{
+          "Content-Type": "application/form-data"
+        },
+  
+      }).then((response:any)=>{
+        this.post.image=response.data.url;
+       this.postService.addPost(this.post).subscribe(data=>{
+        setTimeout(()=>{
+          this.router.navigate(['/admin/post'])
+        })
+       })
+      })
   }
   
+}
+changeImage(e:any){
+  this.post.image=e.target.files[0];
 }
 }
