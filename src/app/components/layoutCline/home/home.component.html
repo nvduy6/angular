@@ -1,16 +1,17 @@
 <section class="information">
-    <div class="container">
+    <div class="container" *ngFor="let user of userList ">
 
         <div class="infomation__content">
             <div class="information__info">
                 <h2>
-                    Hi, I am <span>John</span>,<br>
+                    Hi, I am <span>{{user.name}}</span>,<br>
                     <span>Creative Technologist</span>
                 </h2>
             </div>
             <div class="information__about">
                 <p>
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    {{user.desc}}
+                    <!-- Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. -->
                 </p>
             </div>
             <div class="information__btn">
@@ -19,7 +20,7 @@
         </div>
 
         <div class="information__img">
-            <img src='https://i.postimg.cc/Ss4vK242/Ellipse-1.png' alt='Ellipse-1' />
+            <img src={{user.image}} alt='Ellipse-1' />
         </div>
     </div>
 </section>
