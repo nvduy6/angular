@@ -1,5 +1,15 @@
 <form (ngSubmit)="onSubmit()">
-    <input type="text" [(ngModel)]="user.name" placeholder="name" name="name" />
-    <input type="text" [(ngModel)]="user.desc" placeholder="desc" name="desc" />
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="user.name" class="form-control" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Image</label>
+        <input type="file" [(ngModel)]="user.image" class="form-control" (change)="changeImage($event)" name="image">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="user.desc" class="form-control" name="desc">
+    </div>
     <button>Submit</button>
 </form>

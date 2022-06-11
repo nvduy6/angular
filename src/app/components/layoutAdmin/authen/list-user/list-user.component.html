@@ -35,7 +35,7 @@
             <tr *ngFor="let user of userList;let i = index">
                 <th scope="row">{{i+1}}</th>
                 <td>{{user.name}}</td>
-                <td>{{user.image}}</td>
+                <td><img style="width: 50px; height: 50px;" src={{user.image}} alt=""></td>
                 <td>{{user.desc}}</td>
                 <td>
                     <button nz-button nzType="primary" (click)="onRemoveItem(user.id!)">Delete</button>
