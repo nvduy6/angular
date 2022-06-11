@@ -4,6 +4,7 @@ import { IpCateProject } from 'src/app/models/categoryProjects';
 import { IpProject } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { CategoriesProjectService } from 'src/app/services/categories-project.service';
+import axios, { Axios } from 'axios';
 @Component({
   selector: 'app-add-project',
   templateUrl: './add-project.component.html',
@@ -41,21 +42,50 @@ export class AddProjectComponent implements OnInit {
   })
     }
   onSubmitPost(){
+    
     const id = +this.route.snapshot.paramMap.get('id')!;
     if(id){
-      this.projectService.updateProject(this.project).subscribe((data)=>{
-      setTimeout(()=>{
-        this.router.navigate(['admin/project'])
-      },2000)
-      })
-    }else{
-      this.projectService.addProject(this.project).subscribe(data=>{
-        setTimeout(()=>{
-          this.router.navigate(['admin/post'])
+      const apiUr="https://api.cloudinary.com/v1_1/duynv/image/upload";
+      const formdata = new FormData();
+      formdata.append('file',this.project.image);
+      formdata.append("upload_preset","okwdgnez");
+      axios.post(apiUr,formdata,{
+        headers:{
+          "Content-Type": "application/form-data"
+        },
+  
+      }).then((response:any)=>{
+        this.project.image=response.data.url;
+        this.projectService.updateProject(this.project).subscribe(data=>{
+          setTimeout(()=>{
+            this.router.navigate(['/admin/project'])
+          })
         })
       })
+    }else{
+      const apiUr="https://api.cloudinary.com/v1_1/duynv/image/upload";
+    const formdata = new FormData();
+    formdata.append('file',this.project.image);
+    formdata.append("upload_preset","okwdgnez");
+    axios.post(apiUr,formdata,{
+      headers:{
+        "Content-Type": "application/form-data"
+      },
+
+    }).then((response:any)=>{
+      this.project.image=response.data.url;
+      this.projectService.addProject(this.project).subscribe(data=>{
+        setTimeout(()=>{
+          this.router.navigate(['/admin/project'])
+        })
+      })
+    })
     }
     
+
+  }
+  changeImage(e:any){
+    this.project.image=e.target.files[0];
   }
 
 }

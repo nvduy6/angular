@@ -37,7 +37,9 @@
             <tr *ngFor="let project of projectList;let i = index">
                 <th scope="row">{{i+1}}</th>
                 <td>{{project.name}}</td>
-                <td>{{project.image}}</td>
+                <td>
+                    <img style="width: 50px;height: 50px;" src={{project.image}} alt="">
+                </td>
                 <td>{{project.createAt}}</td>
                 <td>{{project.short_desc}}</td>
                 <td>{{project.desc}}</td>
