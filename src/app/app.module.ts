@@ -22,6 +22,7 @@ import { AddCateProjectComponent } from './components/layoutAdmin/categoryProjec
 import { ListCateProjectComponent } from './components/layoutAdmin/categoryProject/list-cate-project/list-cate-project.component';
 import { AddProjectComponent } from './components/layoutAdmin/project/add-project/add-project.component';
 import { ListProjectComponent } from './components/layoutAdmin/project/list-project/list-project.component';
+import { UserComponent } from './components/layoutCline/user/user.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { ListProjectComponent } from './components/layoutAdmin/project/list-proj
     ListCateProjectComponent,
     AddProjectComponent,
     ListProjectComponent,
+    UserComponent,
    
   
     

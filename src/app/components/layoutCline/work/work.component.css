@@ -18,6 +18,7 @@ body {
 /** feature_works **/
 
 .feature_works .row__title {
+    font-size: 22px;
     padding: 20px 0;
 }
 
@@ -31,6 +32,7 @@ body {
     gap: 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid #e0e0e0;
+    margin-top: 20px;
 }
 
 .item_work__row-date-category {

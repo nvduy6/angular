@@ -31,8 +31,8 @@ header .container {
     justify-content: space-between;
 }
 
-.logo h3 {
-    font-size: 25px;
+.logo img {
+    width: 80px;
 }
 
 .nav__toggle {

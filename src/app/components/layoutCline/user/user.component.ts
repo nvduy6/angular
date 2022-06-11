@@ -3,11 +3,11 @@ import { IpUser } from 'src/app/models/authen';
 import { AuthenService } from 'src/app/services/authen.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class HomeComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   userList!:IpUser[];
   constructor(
@@ -21,5 +21,4 @@ export class HomeComponent implements OnInit {
   ShowUser(){this.authenServie.getUsers().subscribe(data=>{
     this.userList=data
   })}
-
 }
