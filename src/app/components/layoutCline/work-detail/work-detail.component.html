@@ -4,29 +4,28 @@
             <span>Featured works</span>
         </div>
         <div class="feature_works__row-item-work">
-            <div class="item_work" *ngFor="let project of projectList ">
-
-                <div class="item_work__img">
-                    <img src={{project.image}} alt='Rectangle-30' />
-                </div>
+            <div class="item_work">
                 <div class="item_work__content">
                     <div class="item_work__title">
-                        <a style="text-decoration:none ;color: black;" href="/project/detail/{{project.id}}">
-                            <h2>{{project.name}}</h2>
-                        </a>
-
+                        <h2>{{projectDetail.name}}</h2>
                     </div>
                     <div class="item_work__row-date-category">
                         <div class="date">
-                            <span>{{project.createAt}}</span>
+                            <span>{{projectDetail.createAt}}</span>
                         </div>
                         <div class="category">
-                            <span>{{project.categoryProjectId}}</span>
+                            <span>{{projectDetail.categoryProjectId}}</span>
                         </div>
                     </div>
                     <div class="item_work__description">
-                        <p>{{project.short_desc}}</p>
+                        <p>{{projectDetail.short_desc}}</p>
                     </div>
+                </div>
+                <div class="item_work__img">
+                    <img src={{projectDetail.image}} alt='Rectangle-30' />
+                </div>
+                <div style="margin-top: 10px;" class="item_work__description">
+                    <p>{{projectDetail.desc}}</p>
                 </div>
             </div>
 

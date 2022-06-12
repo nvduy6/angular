@@ -53,6 +53,11 @@ header .container {
     font-weight: bold;
 }
 
+.navbar li .nav__link:hover {
+    text-decoration: underline;
+    color: rgb(60, 146, 146);
+}
+
 .navbar.show {
     right: 0;
 }

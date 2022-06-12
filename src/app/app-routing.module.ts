@@ -14,6 +14,7 @@ import { ListProjectComponent } from './components/layoutAdmin/project/list-proj
 import { BlogComponent } from './components/layoutCline/blog/blog.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
+import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
 import { WorkComponent } from './components/layoutCline/work/work.component';
 
 import { AdminGuard } from './services/guards/admin.guard';
@@ -136,6 +137,9 @@ const routes: Routes = [
               {
                 path: 'blog',
                 component: BlogComponent
+              },{
+                path:"project/detail/:id",
+                component:WorkDetailComponent
               }
 
             ]
