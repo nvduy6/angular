@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Heebo", sans-serif !important;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.concat_info {
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-column-gap: 40px;
+}
+
+.contact {
+    margin-top: 10%;
+    width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+}
+
+.info ul li {
+    margin-top: 20px;
+    list-style: none;
+    font-size: 20px;
+}
