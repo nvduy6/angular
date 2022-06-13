@@ -1,0 +1,36 @@
+<div>
+    <header class="bg-white">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 d-grid gap-3 " style="grid-template-columns:auto 100px ;">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">
+                    Concat List
+                </h1>
+            </div>
+
+        </div>
+    </header>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let concat of concatList;let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{concat.fistname}}</td>
+                <td>{{concat.lastname}}</td>
+                <td>{{concat.email}}</td>
+                <td>{{concat.message}}</td>
+                <td>
+                    <button nz-button nzType="primary" (click)="onRemove(concat.id!)">Delete</button>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

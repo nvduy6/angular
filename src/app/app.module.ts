@@ -25,6 +25,7 @@ import { ListProjectComponent } from './components/layoutAdmin/project/list-proj
 import { UserComponent } from './components/layoutCline/user/user.component';
 import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
 import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
+import { ListConcatComponent } from './components/layoutAdmin/list-concat/list-concat.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { ContactComponent } from './components/layoutCline/contact/contact/conta
     UserComponent,
     WorkDetailComponent,
     ContactComponent,
+    ListConcatComponent,
    
   
     

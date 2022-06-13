@@ -39,7 +39,7 @@ onSubmitCate(){
     this.categoryService.addCate(this.cate).subscribe(data=>{
       setTimeout(()=>{
         this.router.navigate(['admin/cate'])
-      })
+      },2000)
     })
   }
   

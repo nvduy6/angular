@@ -3,27 +3,27 @@
         <h2 class="title">Contact Me</h2>
         <div class="concat_info">
             <div>
-                <form action="">
+                <form action="" (ngSubmit)="onSubmit()">
                     <div class="name">
                         <div>
                             <label for="" style="font-size: 20px;">First name</label><br>
-                            <input style="width: 90%;height: 40px; border: none white;" type="text" name="" id="">
+                            <input style="width: 90%;height: 40px; border: none white;" type="text" [(ngModel)]="concat.fistname" name="fistname" id="">
                             <hr style="width: 100%;">
                         </div>
                         <div>
                             <label for="" style="font-size: 20px;">Last name</label><br>
-                            <input type="text" style="width: 90%;height: 40px;border: none" name="" id="">
+                            <input type="text" style="width: 90%;height: 40px;border: none" [(ngModel)]="concat.lastname" name="lastname" id="">
                             <hr style="width: 100%;">
                         </div>
                     </div>
                     <div style="margin-top:20px ;">
                         <label for="" style="font-size: 20px;">Email address</label><br>
-                        <input style="width: 100%;height: 40px;border: none;" type="text" name="" id="">
+                        <input style="width: 100%;height: 40px;border: none;" [(ngModel)]="concat.email" type="text" name="email" id="">
                         <hr>
                     </div>
                     <div style="margin-top:20px ;">
                         <label for="" style="font-size: 20px;"> Message</label><br>
-                        <textarea style="width: 100%; border: none;" name="" id="" cols="30" rows="5"></textarea>
+                        <textarea style="width: 100%; border: none;" name="message" id="" cols="30" rows="5" [(ngModel)]="concat.message"></textarea>
                         <hr>
                     </div>
                     <button style="margin-top: 20px; width: 120px; height: 40px;font-size: 20px;border-radius: 20px;">Submist</button>
