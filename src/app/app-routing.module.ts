@@ -12,6 +12,7 @@ import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-
 import { AddProjectComponent } from './components/layoutAdmin/project/add-project/add-project.component';
 import { ListProjectComponent } from './components/layoutAdmin/project/list-project/list-project.component';
 import { BlogComponent } from './components/layoutCline/blog/blog.component';
+import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
 import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
@@ -137,9 +138,14 @@ const routes: Routes = [
               {
                 path: 'blog',
                 component: BlogComponent
-              },{
+              },
+              {
                 path:"project/detail/:id",
                 component:WorkDetailComponent
+              },
+              {
+                path:"contact",
+                component:ContactComponent
               }
 
             ]

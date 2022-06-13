@@ -24,6 +24,7 @@ import { AddProjectComponent } from './components/layoutAdmin/project/add-projec
 import { ListProjectComponent } from './components/layoutAdmin/project/list-project/list-project.component';
 import { UserComponent } from './components/layoutCline/user/user.component';
 import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
+import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { WorkDetailComponent } from './components/layoutCline/work-detail/work-d
     ListProjectComponent,
     UserComponent,
     WorkDetailComponent,
+    ContactComponent,
    
   
     
