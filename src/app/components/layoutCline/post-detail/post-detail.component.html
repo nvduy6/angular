@@ -1,1 +1,35 @@
-<p>post-detail works!</p>
+<section class="feature_works">
+    <div class="container">
+        <div class="row__title">
+            <span>Featured works</span>
+        </div>
+        <div class="feature_works__row-item-work">
+            <div class="item_work">
+                <div class="item_work__content">
+                    <div class="item_work__title">
+                        <h2>{{postDetail.title}}</h2>
+                    </div>
+                    <div class="item_work__row-date-category">
+                        <div class="date">
+                            <span>{{postDetail.createAt}}</span>
+                        </div>
+                        <div class="category">
+                            <span>{{postDetail. catePost}}</span>
+                        </div>
+                    </div>
+                    <div class="item_work__description">
+                        <p>{{postDetail.short_desc}}</p>
+                    </div>
+                </div>
+                <div class="item_work__img">
+                    <img src={{postDetail.image}} alt='Rectangle-30' />
+                </div>
+                <div style="margin-top: 10px;" class="item_work__description">
+                    <p>{{postDetail.desc}}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

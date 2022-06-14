@@ -8,7 +8,7 @@ import { IpPost } from '../models/post';
 })
 export class PostService {
 
-  API_url:string= "http://localhost:3000/posts"
+  API_url:string= "http://localhost:3000/blogs"
 
   constructor(private http:HttpClient) { }
   addPost(product: any): Observable<IpPost> {

@@ -2,13 +2,13 @@
     <div class="container">
         <h2 class="blog_tile">Blog</h2>
         <div class="blog_item" *ngFor="let post of postList">
-            <h2 class="blog_name">{{post.title}}</h2>
+            <h2 class="blog_name"><a href="" style="text-decoration:none ;color:black;">{{post.title}}</a></h2>
             <div class="blog_infor">
                 <p class="time_blog">
                     {{post.createAt}}
                 </p>
                 <span class="boder" style="margin-left: 10px;">|</span>
-                <p class="blog_cate" style="margin-left: 10px;">{{post.catePost}}</p>
+                <p class="blog_cate" style="margin-left: 10px;"> <a href="categorydetail/{{post.id}}">{{post.catePost}}</a></p>
             </div>
             <div class="blog_desc">{{post.desc}}
             </div>

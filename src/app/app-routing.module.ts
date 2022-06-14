@@ -12,10 +12,13 @@ import { AddPostComponent } from './components/layoutAdmin/post/add-post/add-pos
 import { ListPostComponent } from './components/layoutAdmin/post/list-post/list-post.component';
 import { AddProjectComponent } from './components/layoutAdmin/project/add-project/add-project.component';
 import { ListProjectComponent } from './components/layoutAdmin/project/list-project/list-project.component';
-import { BlogComponent } from './components/layoutCline/blog/blog.component';
+// import { BlogComponent } from './components/layoutCline/blog/blog.component';
+// import { CateBlogComponent } from './components/layoutCline/cateBlog/cate-blog/cate-blog.component';
 import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
+import { ListCatePostComponent } from './components/layoutCline/list-cate-post/list-cate-post.component';
+import { PostDetailComponent } from './components/layoutCline/post-detail/post-detail.component';
 import { PostComponent } from './components/layoutCline/post/post.component';
 import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
 import { WorkComponent } from './components/layoutCline/work/work.component';
@@ -155,8 +158,16 @@ const routes: Routes = [
                 component:WorkDetailComponent
               },
               {
+                path:"blog/detail/:id",
+                component:PostDetailComponent,
+              },
+              {
                 path:"contact",
                 component:ContactComponent
+              },
+              {
+                path:"categorydetail/:id",
+                component:ListCatePostComponent
               }
 
             ]

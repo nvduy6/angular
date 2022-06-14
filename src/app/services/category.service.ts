@@ -16,8 +16,8 @@ API_url:string= "http://localhost:3000/categoryBlogs"
   getCates(): Observable<IPcate[]> {
     return this.http.get<IPcate[]>(this.API_url);
   }
-  getCate(id: string | number): Observable<IPcate> {
-    return this.http.get<IPcate>(`${this.API_url}/${id}`)
+  getCate(id: string | number): Observable<any> {
+    return this.http.get(`${this.API_url}/${id}?_embed=blogs`)
   }
   removeCate(id: number): Observable<IPcate> {
     return this.http.delete<IPcate>(`${this.API_url}/${id}`)
