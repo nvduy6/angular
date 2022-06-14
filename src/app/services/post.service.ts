@@ -15,10 +15,10 @@ export class PostService {
     return this.http.post<IpPost>(this.API_url, product)
   }
   getPosts(): Observable<IpPost[]> {
-    return this.http.get<IpPost[]>(this.API_url);
+    return this.http.get<IpPost[]>(`${this.API_url}?_expand=categoryBlog`);
   }
   getPost(id: string | number): Observable<IpPost> {
-    return this.http.get<IpPost>(`${this.API_url}/${id}`)
+    return this.http.get<IpPost>(`${this.API_url}/${id}?_expand=categoryBlog`)
   }
   removePost(id: number): Observable<IpPost> {
     return this.http.delete<IpPost>(`${this.API_url}/${id}`)

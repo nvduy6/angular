@@ -3,7 +3,11 @@ export interface IpPost{
     title:string,
     image:string,
     createAt:string,
-    catePost:string,
+    categoryBlogId:number|string,
+    categoryBlog?: {
+        name?: string,
+        id?: number | string,
+    };
     short_desc:string,
     desc:string
 

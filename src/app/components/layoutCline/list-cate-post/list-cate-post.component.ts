@@ -18,12 +18,10 @@ export class ListCatePostComponent implements OnInit {
   
     ngOnInit(): void {
       const id=+this.router.snapshot.paramMap.get('id')!;
-      console.log(id)
       if(id){
         this.categoryService.getCate(id).subscribe(data=>{
           this.cateName=data
           this.categoryDetail=data.blogs
-          console.log(data.blogs)
         })
       }
     }

@@ -15,7 +15,7 @@ export class AddPostComponent implements OnInit {
 post:IpPost={
   title:"",
     image:"",
-    catePost:"",
+    categoryBlogId:0,
     createAt:"",
     short_desc:"",
     desc:""
