@@ -26,6 +26,9 @@ import { UserComponent } from './components/layoutCline/user/user.component';
 import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
 import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
 import { ListConcatComponent } from './components/layoutAdmin/list-concat/list-concat.component';
+import { ListCateBlogComponent } from './components/layoutCline/cateBlog/list-cate-blog/list-cate-blog.component';
+import { PostComponent } from './components/layoutCline/post/post.component';
+import { PostDetailComponent } from './components/layoutCline/post-detail/post-detail.component';
 
 
 @NgModule({
@@ -51,6 +54,9 @@ import { ListConcatComponent } from './components/layoutAdmin/list-concat/list-c
     WorkDetailComponent,
     ContactComponent,
     ListConcatComponent,
+    ListCateBlogComponent,
+    PostComponent,
+    PostDetailComponent,
    
   
     

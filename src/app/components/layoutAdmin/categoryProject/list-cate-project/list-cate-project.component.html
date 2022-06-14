@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 d-grid gap-3 " style="grid-template-columns:auto 100px ;">
             <div>
                 <h1 class="text-3xl font-bold text-gray-900">
-                    Product List
+                    Category Project List
                 </h1>
             </div>
             <div>
@@ -35,7 +35,7 @@
             <tr *ngFor="let catePro of cateListPro;let i = index">
                 <th scope="row">{{i+1}}</th>
                 <td>{{catePro.name}}</td>
-                <td>
+                <td style="display: flex;">
                     <button nz-button nzType="primary" (click)="onRemoveItem(catePro.id!)">Delete</button>
 
                     <a href="/admin/cateproject/edit/{{catePro.id}}"> <button nz-button nzType="primary">Update</button></a>

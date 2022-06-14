@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.blog_item {
+    margin-top: 20px;
+}
+
+.blog_infor {
+    display: flex;
+}

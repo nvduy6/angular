@@ -16,6 +16,7 @@ import { BlogComponent } from './components/layoutCline/blog/blog.component';
 import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
+import { PostComponent } from './components/layoutCline/post/post.component';
 import { WorkDetailComponent } from './components/layoutCline/work-detail/work-detail.component';
 import { WorkComponent } from './components/layoutCline/work/work.component';
 
@@ -147,7 +148,7 @@ const routes: Routes = [
               },
               {
                 path: 'blog',
-                component: BlogComponent
+                component: PostComponent
               },
               {
                 path:"project/detail/:id",
