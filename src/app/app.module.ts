@@ -30,6 +30,7 @@ import { ListConcatComponent } from './components/layoutAdmin/list-concat/list-c
 import { PostComponent } from './components/layoutCline/post/post.component';
 import { PostDetailComponent } from './components/layoutCline/post-detail/post-detail.component';
 import { ListCatePostComponent } from './components/layoutCline/list-cate-post/list-cate-post.component';
+import { DatailCateProjectComponent } from './components/layoutCline/datail-cate-project/datail-cate-project.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { ListCatePostComponent } from './components/layoutCline/list-cate-post/l
     PostDetailComponent,
     // CateBlogComponent,
     ListCatePostComponent,
+    DatailCateProjectComponent,
    
   
     

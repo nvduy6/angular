@@ -12,7 +12,7 @@
         <select name="catePost" [(ngModel)]="project.categoryProjectId" id="category" className="focus:ring-indigo-500 focus:border-indigo-800 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300">
             <option>-- Chọn danh mục sản phẩm --</option>
 
-            <option *ngFor="let cate of cateList;let i = index" value={{cate.name}}>{{cate.name}}</option>
+            <option *ngFor="let cate of cateList;let i = index" value={{cate.id}}>{{cate.name}}</option>
 
 
 

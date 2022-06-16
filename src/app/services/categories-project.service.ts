@@ -17,8 +17,9 @@ export class CategoriesProjectService {
   getCatesPro(): Observable<IpCateProject[]> {
     return this.http.get<IpCateProject[]>(this.API_url);
   }
-  getCatePro(id: string | number): Observable<IpCateProject> {
-    return this.http.get<IpCateProject>(`${this.API_url}/${id}`)
+  getCatePro(id: number | string): Observable<any> {
+    return this.http.get(`${this.API_url}/${id}?_embed=works`)
+ 
   }
   removeCatePro(id: number): Observable<IpCateProject> {
     return this.http.delete<IpCateProject>(`${this.API_url}/${id}`)

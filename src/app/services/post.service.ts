@@ -17,6 +17,10 @@ export class PostService {
   getPosts(): Observable<IpPost[]> {
     return this.http.get<IpPost[]>(`${this.API_url}?_expand=categoryBlog`);
   }
+  getPostsLimit(): Observable<IpPost[]> {
+    return this.http.get<IpPost[]>(`${this.API_url}?_limit=2`);
+  }
+  
   getPost(id: string | number): Observable<IpPost> {
     return this.http.get<IpPost>(`${this.API_url}/${id}?_expand=categoryBlog`)
   }

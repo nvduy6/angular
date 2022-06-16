@@ -16,7 +16,7 @@ export class AddProjectComponent implements OnInit {
   project:IpProject={
     name:"",
       image:"",
-      categoryProjectId:"",
+      categoryProjectId:0,
       createAt:"",
       short_desc:"",
       desc:""
@@ -37,7 +37,7 @@ export class AddProjectComponent implements OnInit {
       }
     }
     ShowCate(){
-  this.categoryProServie.getCatesPro().subscribe(data=>{
+  this.categoryProServie.getCatesPro().subscribe((data)=>{
     this.cateList=data
   })
     }
@@ -56,7 +56,7 @@ export class AddProjectComponent implements OnInit {
   
       }).then((response:any)=>{
         this.project.image=response.data.url;
-        this.projectService.updateProject(this.project).subscribe(data=>{
+        this.projectService.updateProject(this.project).subscribe(()=>{
           setTimeout(()=>{
             this.router.navigate(['/admin/project'])
           })
@@ -74,7 +74,7 @@ export class AddProjectComponent implements OnInit {
 
     }).then((response:any)=>{
       this.project.image=response.data.url;
-      this.projectService.addProject(this.project).subscribe(data=>{
+      this.projectService.addProject(this.project).subscribe(()=>{
         setTimeout(()=>{
           this.router.navigate(['/admin/project'])
         })

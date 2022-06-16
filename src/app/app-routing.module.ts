@@ -15,6 +15,7 @@ import { ListProjectComponent } from './components/layoutAdmin/project/list-proj
 // import { BlogComponent } from './components/layoutCline/blog/blog.component';
 // import { CateBlogComponent } from './components/layoutCline/cateBlog/cate-blog/cate-blog.component';
 import { ContactComponent } from './components/layoutCline/contact/contact/contact.component';
+import { DatailCateProjectComponent } from './components/layoutCline/datail-cate-project/datail-cate-project.component';
 import { HomeComponent } from './components/layoutCline/home/home.component';
 import { LayoutComponent } from './components/layoutCline/layout/layout.component';
 import { ListCatePostComponent } from './components/layoutCline/list-cate-post/list-cate-post.component';
@@ -168,6 +169,10 @@ const routes: Routes = [
               {
                 path:"categorydetail/:id",
                 component:ListCatePostComponent
+              },
+              {
+                path:"categoryProjectdetail/:id",
+                component:DatailCateProjectComponent
               }
 
             ]

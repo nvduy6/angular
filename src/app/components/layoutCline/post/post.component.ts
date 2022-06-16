@@ -19,6 +19,7 @@ postList!:IpPost[]
 ShowPost(){
   this.postService.getPosts().subscribe(data=>{
     this.postList=data
+   
   })
 }
 }

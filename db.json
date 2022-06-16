@@ -114,41 +114,41 @@
       "id": 4
     }
   ],
-  "projects": [
+  "works": [
     {
-      "name": "Designing Dashboards",
-      "image": "http://res.cloudinary.com/duynv/image/upload/v1654935703/image/bsm3ivp8o8at6wkocx2p.jpg",
-      "categoryProjectId": "Dashboard",
-      "createAt": "2020",
-      "short_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "name": "duy",
+      "image": "http://res.cloudinary.com/duynv/image/upload/v1655299186/image/mmoxstuenorvfcaisfau.jpg",
+      "categoryProjectId": 1,
+      "createAt": "2002",
+      "short_desc": "",
+      "desc": "",
       "id": 1
     },
     {
-      "name": "Vibrant Portraits of 2020",
-      "image": "http://res.cloudinary.com/duynv/image/upload/v1654935757/image/qnen32qwxfz3wz9hpa35.jpg",
-      "categoryProjectId": "Illustration",
-      "createAt": "2018",
-      "short_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "name": "admin",
+      "image": "http://res.cloudinary.com/duynv/image/upload/v1655299204/image/sun6hzgrdm9p7if55vsk.png",
+      "categoryProjectId": 1,
+      "createAt": "2002",
+      "short_desc": "",
+      "desc": "",
       "id": 2
     },
     {
-      "name": "36 Days of Malayalam type",
-      "image": "http://res.cloudinary.com/duynv/image/upload/v1654935799/image/bl9c9gp48z4odaxmnyzl.jpg",
-      "categoryProjectId": "Typography",
-      "createAt": "2018",
-      "short_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "name": "nukeviet",
+      "image": "http://res.cloudinary.com/duynv/image/upload/v1655299225/image/get7iqqqpv7dm0fjfprz.jpg",
+      "categoryProjectId": 2,
+      "createAt": "2002",
+      "short_desc": "",
+      "desc": "",
       "id": 3
     },
     {
-      "name": "Components",
-      "image": "http://res.cloudinary.com/duynv/image/upload/v1654935845/image/fccz8stquwodvcz1xelv.png",
-      "categoryProjectId": "Components, Design",
-      "createAt": "2018",
-      "short_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud ame",
-      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud ame",
+      "name": "nukeviet",
+      "image": "http://res.cloudinary.com/duynv/image/upload/v1655301669/image/uhtqr3ivhyzuv7exf3vc.png",
+      "categoryProjectId": "3",
+      "createAt": "",
+      "short_desc": "",
+      "desc": "",
       "id": 4
     }
   ],
